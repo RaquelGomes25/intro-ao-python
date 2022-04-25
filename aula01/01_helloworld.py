@@ -2,3 +2,4 @@
 print('Oi mundo')
 
 # print("Teste")
+print("Teste")

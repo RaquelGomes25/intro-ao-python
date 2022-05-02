@@ -9,8 +9,8 @@ print()
 
 # O interpretador precisa "adivinhar" o tipo da variável
 # A função input sempre retorna uma string
-primeiro_num = input('Insira um primeiro número ')
-segundo_num = input('Insira um segundo número ')
+primeiro_num = input('Insira um primeiro número: ')
+segundo_num = input('Insira um segundo número: ')
 
 # Como as variáveis "primeiro_num" e "segundo_num" são do tipo "str",
 # o operador "+" concatena as strings ao invés de somar os valores.

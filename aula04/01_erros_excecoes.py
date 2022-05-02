@@ -1,8 +1,9 @@
 # Erros de sintaxe sempre interrompem a execução do programa.
+from meu_modulo import imprimir_no_log
 quantidade = 10000
 print('quantidade:', quantidade)
 
-# if(quantidade = 3000)
+# if(quantidade == 3000)
 # print("Você tem 3000 dinheiros.")
 
 # Exceções são lançadas por erros de lógica
@@ -12,12 +13,12 @@ print('quantidade:', quantidade)
 print('Tratamento de exceções - except genérico')
 lista = [1, 2, 3]
 try:
-    print ("    Segundo elemento = {}".format(lista[1]))
+    print("    Segundo elemento = {}".format(lista[1]))
     # A linha abaixo lança uma exceção porque a lista só tem 3 itens
-    print ("    Quarto elemento  = {}".format(lista[3]))
-except: # captura qualquer tipo de exceção levantada pelo código
+    print("    Quarto elemento  = {}".format(lista[3]))
+except:  # captura qualquer tipo de exceção levantada pelo código
     # A exceção é tratada aqui ao invés de finalizar o programa
-    print ("    Ocorreu um erro.")
+    print("    Ocorreu um erro.")
 
 print('    O programa continuou')
 print()
@@ -29,11 +30,11 @@ lista = [1, 2, 3]
 divisor = 0
 print('Tratamento de exceções - except específico')
 try:
-    print ("Segundo elemento = {}".format(lista[1]))
+    print("Segundo elemento = {}".format(lista[1]))
     # A linha abaixo lança uma exceção porque a lista só tem 3 itens
     # quantidade = lista[1]/divisor
-except IndexError: # captura apenas exceção de acesso a índices inválidos
-    print ("Ocorreu um erro.")
+except IndexError:  # captura apenas exceção de acesso a índices inválidos
+    print("Ocorreu um erro.")
 
 print('O programa continuou')
 print()
@@ -42,18 +43,17 @@ print()
 print('Tratamento de exceções - else e finally')
 lista = [1, 2, 3]
 try:
-    print ("Segundo elemento = {}".format(lista[1]))
+    print("Segundo elemento = {}".format(lista[1]))
     # A linha abaixo lança uma exceção porque a lista só tem 3 itens
     quantidade = lista[3]/divisor
-except IndexError as e: # captura apenas exceção de acesso a índices inválidos
-    print ("Ocorreu um erro de acesso a índice: ", e)
+except IndexError as e:  # captura apenas exceção de acesso a índices inválidos
+    print("Ocorreu um erro de acesso a índice: ", e)
 else:
     print('Else - Se não ocorrer exceção, esse bloco é executado')
 finally:
     print('Finally - Executou com ou sem exceção')
 
 # Podemos lançar nossas próprias exceções
-from meu_modulo import imprimir_no_log
 
 imprimir_no_log('teste', 'invalido')
 # Traceback (most recent call last):

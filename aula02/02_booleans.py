@@ -38,10 +38,12 @@ a = 0
 b = 1
 c = 1.0
 d = 780
+e = None
 print('a: ' + str(bool(a)))
 print('b: ' + str(bool(b)))
 print('c: ' + str(bool(c)))
 print('d: ' + str(bool(d)))
+print('e: ' + str(bool(e)))
 
 frase = 'A Dori é muito boazinha'
 print('frase: ' + str(bool(frase)))

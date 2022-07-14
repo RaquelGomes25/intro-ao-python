@@ -2,10 +2,14 @@
 # fazer nada neste arquivo
 import sys
 
+
 def main():
     args = ler_argumentos()
     print(args)
+
+
 main()
+
 
 def ler_argumentos():
     args = {}

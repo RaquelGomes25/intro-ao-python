@@ -43,5 +43,7 @@ If anything could ever be this good again
 The only thing I'll ever ask of you
 You've got to promise not to stop when I say when
 """
-
-
+lista = everlong_foo_fighters.split()  # quebra a string em palavras e não em caracter
+# set para não permitir repetições e sorted ordena a lista
+textofinal = sorted(set(lista))
+print(textofinal)

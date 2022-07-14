@@ -4,3 +4,12 @@
 # Exemplo de saída: !saleDurtsnoC od nohtyP ed\nosruc od sasohlivaram serehlum iO
 
 arquivo = 'entrada_desafio_11.txt'
+
+arquivo_entrada = 'entrada_desafio_11.txt'
+with open(arquivo_entrada, 'r') as arquivo1:
+    text = arquivo1.read()
+    print(text)
+
+arquivo_saida = 'saida_desafio_11.txt'
+with open(arquivo_saida, 'w') as arquivo2:
+    arquivo2.write(text[::-1])

@@ -1,3 +1,4 @@
+import colorama
 # Você é a professora de Ciências e está lançando as notas das alunas.
 # Você quer criar um sistema no qual suas alunas podem ver suas notas digitando o nome.
 # As listas de alunas e notas se encontra abaixo. As notas podem variar de 0 a 100.
@@ -14,3 +15,21 @@ nome = input("Qual o seu nome? ")
 # Notas abaixo de 60 devem ser impressas com a cor vermelha, e notas a partir de 90 devem ser
 # impressas com a cor verde.
 # Se o nome digitado não existir na lista, imprima uma mensagem de erro usando a cor vermelha.
+colorama.init()
+
+if nome in alunas:
+    for i, aluna in enumerate(alunas):
+        if aluna == nome:
+            if notas[i] < 60:
+                print('A aluna ' + nome + ' tirou ' +
+                      colorama.Fore.RED + str(notas[i]))
+                print(colorama.Style.RESET_ALL)
+            elif notas[i] >= 90:
+                print('A aluna ' + nome + ' tirou ' +
+                      colorama.Fore.GREEN + str(notas[i]))
+                print(colorama.Style.RESET_ALL)
+            else:
+                print('A aluna ' + nome + ' tirou ' + str(notas[i]))
+else:
+    print(colorama.Fore.RED + 'Erro - o nome ' + nome +
+          ' não está na lista.' + colorama.Style.RESET_ALL)
